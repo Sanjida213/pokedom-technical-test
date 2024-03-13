@@ -13,6 +13,7 @@ let pokemonArrays = [...pokemonArray];
 
 
 const cards = () => {
+  cardsContainer.innerHTML = "";
   cardsContainer.style.display = "flex"
   cardsContainer.style.flexWrap = "wrap"
 
@@ -44,11 +45,11 @@ cards();
 const filterButton = (event: Event) => {
   const userInput = (event.currentTarget as HTMLInputElement).value.toLowerCase();
 
-    const filteredPokemons = pokemonArray.filter((pokemon) => {
+    pokemonArrays = pokemonArray.filter((pokemon) => {
       return pokemon.name.toLowerCase().includes(userInput);
     });
   
-    cards(filteredPokemons);
+  cards();   
 }
 
-filterInput.addEventListener("input", filterButton)
+filterInput.addEventListener("input", filterButton);
