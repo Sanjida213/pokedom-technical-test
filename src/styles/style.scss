@@ -47,3 +47,17 @@ body {
     }
   }
 }
+
+
+.pokemon-card {
+  width: 150px;  
+  .pokemon-name {
+    font-size: 23px; /* Adjust font size as needed */
+    color: blue; /* Adjust color as needed */
+  }
+
+  .pokemon-info {
+    font-size: 15px;
+    color: gray
+}
+}
